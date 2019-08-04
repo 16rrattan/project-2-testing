@@ -10,6 +10,30 @@ module.exports = function (app) {
         });
     });
 
+    //get route to print all the haikus
+      app.get("/api/authors", function (req, res) {
+    // Here we add an "include" property to our options in our findAll query
+    // We set the value to an array of the models we want to include in a left outer join
+    // In this case, just db.Post
+    db.Author.findAll({
+      include: [db.haikus]
+    }).then(function (dbAuthor) {
+      res.json(dbAuthor);
+    });
+  });
+
+
+//get route to print list all of this users haikus
+app.get("/haikus/:id", function(req, res){
+    db.haikus.findAll({
+        where: {
+            id: req.params.id
+        }
+    }).then(function(dbHaiku){
+
+    })
+})
+
 
 
 

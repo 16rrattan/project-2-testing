@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
     var Haiku = sequelize.define("Haiku", {
-        poem: DataTypes.STRING
+        poem: DataTypes.STRING,
     });
 
     Haiku.associate = function (models) {
