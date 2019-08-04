@@ -1,16 +1,24 @@
   $("#loginbutton").on("submit", function(event) {
     event.preventDefault();
 
-    var incomingUser = {
-      name: $("#createplan [name=plan]").val().trim(),
+    var incomingAuthor = {
+      name: $("#nameinput").val().trim(),
       password: $("#passwordinput".val().trim());
+      confirmpassword: $("#confirmpasswordinput".val().trim());
+      city: $("cityinput").val().trim());
     };
 
-    function submitLogin(post) {
-    $.post("/api/authors", post, function() {
-      window.location.href = "/blog";
-    });
-  }
+      // Send the POST request.so we can push that inputted data to the server and check its credientials
+    $.ajax("/api/plans", {
+      type: "POST",
+      data: newPlan
+    }).then(
+      function() {
+        console.log("created new plan");
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
 
 
 
