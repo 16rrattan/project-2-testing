@@ -16,9 +16,12 @@ module.exports = function (app) {
     //     res.sendFile(path.join(__dirname, "../views/index.handlebars"));
     // });
 
-        app.get("/", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/index.html"));
-    });
+     app.get("/", function(req, res){
+         res.render('index', {loginbutton:"Hello"})//this sets the button of rendered page using handlebars
+         //aka this is how you populate a new screen with data
+     })
+
+     app.post("/", )
 
     app.get("/edit", function (req, res) {
         res.sendFile(path.join(__dirname, "../views/edit.handlebars"));

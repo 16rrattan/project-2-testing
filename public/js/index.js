@@ -3,20 +3,21 @@
 
     var incomingAuthor = {
       name: $("#nameinput").val().trim(),
-      password: $("#passwordinput".val().trim());
-      confirmpassword: $("#confirmpasswordinput".val().trim());
-      city: $("cityinput").val().trim());
+      password: $("#passwordinput").val().trim(),
+      confirmpassword: $("#confirmpasswordinput").val().trim(),
+      city: $("cityinput").val().trim()
     };
 
+
       // Send the POST request.so we can push that inputted data to the server and check its credientials
-    $.ajax("/api/plans", {
+    $.ajax("/api/author", {
       type: "POST",
-      data: newPlan
+      data: incomingAuthor
     }).then(
       function() {
-        console.log("created new plan");
-        // Reload the page to get the updated list
-        location.reload();
+        console.log("reciept: author login info has been pushed");
+        // // Reload the page to get the updated list
+        // location.reload();
       }
     );
 
