@@ -11,3 +11,31 @@
         </li>
         {{/each}}
 </ul>
+
+
+<script type="text/javascript">
+
+$("#createhaiku").on("submit", function(event) {
+    // Make sure to preventDefault on a submit event.
+    event.preventDefault();
+
+    // [name=plan] will find an element with a "name" attribute equal to the string "plan"
+    var newHaiku = {
+      poem: $("#createhaiku [name=haiku]").val().trim()
+    };
+
+    // Send the POST request.
+    $.ajax("/api/haikus", {
+      type: "POST",
+      data: newHaiku
+    }).then(
+      function() {
+        console.log("created new plan");
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+
+
+</script>
