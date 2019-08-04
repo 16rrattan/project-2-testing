@@ -1,0 +1,1 @@
+create database haiku_app_db;
