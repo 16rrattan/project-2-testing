@@ -12,7 +12,7 @@ module.exports = function (app) {
       where: {
         id: req.params.id
       },
-      include: [db.Post]
+      include: [db.Haiku]
     }).then(function (dbAuthor) {
       res.json(dbAuthor);
     });
