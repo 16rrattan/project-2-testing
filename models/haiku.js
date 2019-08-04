@@ -4,8 +4,8 @@ module.exports = function (sequelize, DataTypes) {
     });
 
     Haiku.associate = function (models) {
-        // We're saying that a Post should belong to an Author
-        // A Post can't be created without an Author due to the foreign key constraint
+        // We're saying that a Haiku should belong to an Author
+        // A Haiku can't be created without an Author due to the foreign key constraint
         Haiku.belongsTo(models.Author, {
             foreignKey: {
                 allowNull: false

@@ -1,0 +1,13 @@
+<input class="form-control" type="text" placeholder="Enter a Haiku" id="haikuinput">
+<br>
+<h3>list of past haiku's</h3>
+<br>
+<ul>
+    {{#each haikus}}
+    <li>
+        <p>
+            {{this.id}}. {{this.haiku}}
+        </p>
+        </li>
+        {{/each}}
+</ul>

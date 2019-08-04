@@ -10,6 +10,9 @@ module.exports = function (app) {
         });
     });
 
+
+
+
     //get route to check if user exists
     app.get("api/authors", function (req, res) {
         var query = {};

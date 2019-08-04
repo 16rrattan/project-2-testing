@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ReN'ai Profile</title>
+</head>
+
+<body>
+
+    <h1>ReN'ai - The Only Haiku Dating App</h1>
+    <br>
+    <h2>Profile Page</h2>
+    <br>
+    <br>
+
+
+{{!-- i want these handlebars to list out this users haiku's and i wanna put buttons next to each of these for users to be
+able to like and dislike --}}
+    {{#each haikus}}
+    <li>
+        <p>
+            {{this.id}}. {{this.haiku}}
+            <button data-haikuid="{{this.id}}" class="delhaiku">Like!</button>
+            <button data-haikuid="{{this.id}}" class="delhaiku">Dislike!</button>
+        </p>
+        </li>
+        {{/each}}
+
+    <button type="button" class="btn btn-primary">Browse!</button>
+
+</body>
+
+</html>
