@@ -28,6 +28,10 @@ module.exports = function (app) {
         });
     });
 
+    app.post("api/haikus", function (req, res){
+        
+    })
+
     //get route to print all the haikus
       app.get("/api/authors", function (req, res) {
     // Here we add an "include" property to our options in our findAll query
