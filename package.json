@@ -1,0 +1,20 @@
+{
+  "name": "project-2-testing",
+  "version": "1.0.0",
+  "description": "restarting",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/16rrattan/project-2-testing.git"
+  },
+  "author": "kevin spies",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/16rrattan/project-2-testing/issues"
+  },
+  "homepage": "https://github.com/16rrattan/project-2-testing#readme"
+}
