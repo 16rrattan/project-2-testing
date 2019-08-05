@@ -24,5 +24,8 @@ module.exports = function(sequelize, DataTypes) {
     });
   };
 
+  // Syncs with DB
+  Author.sync();
+
   return Author;
 };

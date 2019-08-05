@@ -10,7 +10,7 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       },
-      include: [db.Haiku]
+      include: [db.Haikus.poem]
     }).then(function(dbAuthor) {
       res.json(dbAuthor);
     });
@@ -20,13 +20,18 @@ module.exports = function(app) {
   //POST always have a req.body or "payload"
   app.post("/api/author", function(req, res) {
     console.log(req.body);
-    db.Author.findAll({
-      include: [db.Haiku]
-    }).then(function(dbAuthor) {
-      //if dbAuthor.length < 1{
-      db.Author.create(req.body).then(function(dbAuthor) {
-        res.json(dbAuthor);
-      });
+
+    // //create
+    // db.Author.create({
+
+    // })
+
+    // db.Author.findAll({
+    //   include: [db.Haiku]
+    // }).then(function(dbAuthor) {
+    //if dbAuthor.length < 1{
+    db.Author.create(req.body).then(function(dbAuthor) {
+      res.json(dbAuthor);
     });
   });
 

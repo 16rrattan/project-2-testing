@@ -1,0 +1,84 @@
+
+}
+
+/* unvisited link */
+a:link {
+  color: rgb(55, 0, 255);
+}
+
+/* visited link */
+a:visited {
+  color: #00ff00;
+}
+
+/* mouse over link */
+a:hover {
+  color: #ff00ff;
+}
+
+/* selected link */
+a:focus {
+  color: #0000ff;
+}
+
+.jumbotron {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url("../images/sakura.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body,
+html {
+  background-image: url("../images/img_rose.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 10px;
+  background-color: rgb(211, 3, 20);
+  color: rgb(199, 82, 88);
+}
+
+
+
+h1 {
+  color: rgb(255, 8, 0);
+  font-family: "Chalkduster", fantasy;
+  font-size: 300%;
+  font-style: italic;
+  text-align: center;
+}
+
+h2 {
+  color: rgb(255, 8, 0);
+  font-family: "Chalkduster", fantasy;
+  font-size: 800%;
+  font-style: italic;
+  text-align: center;
+}
+
+h3 {
+  color: rgb(255, 8, 0);
+  font-family: "Chalkduster", fantasy;
+  font-size: 300%;
+  font-style: italic;
+  text-align: center;
+}
+
+.list-group {
+  margin: 10px;
+  background-color: rgb(211, 3, 20);
+  color: rgb(199, 82, 88);
+}
+
+.card {
+  margin: 10px;
+  background-color: rgb(211, 3, 20);
+  color: rgb(199, 82, 88);
+}
+
+div {
+  border: 1px solid blueviolet;
+}
+
+
